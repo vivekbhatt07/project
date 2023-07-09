@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Landing } from "./pages";
+import { Landing, Destination, Detail, Country } from "./pages";
 
 const App = () => {
   return (
@@ -18,9 +18,12 @@ const App = () => {
         draggable
         autoClose={5000}
       />
-      <div>
+      <div className="bg-stone-700">
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/continent/:continentName/" element={<Country />}>
+            <Route path=":countryName" element={<Destination />} />
+          </Route>
         </Routes>
       </div>
     </>

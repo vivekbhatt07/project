@@ -1,3 +1,6 @@
-import Landing from "./landing";
+import Landing from "./Landing";
+import Country from "./Country";
+import Detail from "./Detail";
+import Destination from "./Destination";
 
-export { Landing };
+export { Landing, Country, Detail, Destination };
