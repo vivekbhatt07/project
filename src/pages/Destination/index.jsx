@@ -27,7 +27,7 @@ const Destination = () => {
           Top Places in {getCountry?.name} for your next holiday
         </h1>
       </div>
-      <div className="flex justify-between">
+      <div className="flex justify-between flex-wrap">
         {getCountry?.destinations?.map((currentCountry) => {
           return <Card {...currentCountry} key={currentCountry.id} />;
         })}

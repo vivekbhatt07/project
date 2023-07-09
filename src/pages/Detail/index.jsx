@@ -1,9 +1,13 @@
 import React from "react";
-import { PageContainer } from "../../Components";
+import { PageContainer, IconActionBtn } from "../../Components";
 import { useParams } from "react-router-dom";
 import { data } from "../../Data";
+import { useNavigate } from "react-router-dom";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 const Detail = () => {
+  const navigate = useNavigate();
+
   const { continentName, countryName, destinationName } = useParams();
 
   const getContinent = data.continents.find((currentContinent) => {
@@ -19,6 +23,9 @@ const Detail = () => {
   });
   return (
     <PageContainer className="flex flex-col gap-8">
+      <IconActionBtn handleClick={() => navigate(-1)}>
+        <ArrowBackIcon />
+      </IconActionBtn>
       <h1 className="text-4xl text-center">{getDestination?.name}</h1>
       <div className="flex gap-4">
         <div className="w-[400px]">
