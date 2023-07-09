@@ -22,7 +22,10 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/continent/:continentName/" element={<Country />} />
-          <Route path=":countryName" element={<Destination />} />
+          <Route
+            path="/continent/:continentName/:countryName"
+            element={<Destination />}
+          />
         </Routes>
       </div>
     </>
