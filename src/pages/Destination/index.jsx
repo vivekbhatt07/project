@@ -12,9 +12,9 @@ const Destination = () => {
   const getContinent = data.continents.find((currentContinent) => {
     return currentContinent.name == continentName;
   });
-  console.log(getContinent);
+  console.log({ getContinent });
 
-  const getCountry = getContinent.find((currentCountry) => {
+  const getCountry = getContinent?.countries?.find((currentCountry) => {
     return currentCountry.name == countryName;
   });
 

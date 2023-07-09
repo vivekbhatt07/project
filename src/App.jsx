@@ -21,9 +21,8 @@ const App = () => {
       <div className="bg-stone-700">
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/continent/:continentName/" element={<Country />}>
-            <Route path=":countryName" element={<Destination />} />
-          </Route>
+          <Route path="/continent/:continentName/" element={<Country />} />
+          <Route path=":countryName" element={<Destination />} />
         </Routes>
       </div>
     </>
