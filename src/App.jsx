@@ -26,6 +26,10 @@ const App = () => {
             path="/continent/:continentName/:countryName"
             element={<Destination />}
           />
+          <Route
+            path="/continent/:continentName/:countryName/:destinationName"
+            element={<Detail />}
+          />
         </Routes>
       </div>
     </>

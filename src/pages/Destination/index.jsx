@@ -12,7 +12,6 @@ const Destination = () => {
   const getContinent = data.continents.find((currentContinent) => {
     return currentContinent.name == continentName;
   });
-  console.log({ getContinent });
 
   const getCountry = getContinent?.countries?.find((currentCountry) => {
     return currentCountry.name == countryName;
@@ -25,7 +24,7 @@ const Destination = () => {
       </IconActionBtn>
       <div className="flex flex-col gap-4">
         <h1 className="text-3xl text-center font-semibold">
-          Welcome to Trip Advisor
+          Top Places in {getCountry?.name} for your next holiday
         </h1>
       </div>
       <div className="flex justify-between">

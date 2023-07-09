@@ -3,7 +3,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { Link, useLocation, useParams } from "react-router-dom";
 
 const Card = (props) => {
-  const { continentName } = useParams();
+  const { continentName, countryName } = useParams();
   const { id, name, image, countries, destinations } = props;
   const location = useLocation();
 
@@ -11,6 +11,12 @@ const Card = (props) => {
 
   if (location.pathname == `/continent/${continentName}`) {
     pathName = `/continent/${continentName}/${name}`;
+  } else if (
+    location.pathname == `/continent/${continentName}/${countryName}`
+  ) {
+    pathName = `/continent/${continentName}/${countryName}/${name
+      .split(" ")
+      .join("")}`;
   } else {
     pathName = `/continent/${name}`;
   }
